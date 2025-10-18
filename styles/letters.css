@@ -1,0 +1,197 @@
+:root {
+  --darkBlue-color: #62aec5;
+  --lightBlue-color: #add2e4;
+  --lightPink-color: #f678a7;
+  --darkPink-color: #e64072;
+  --white-color: #ffffff;
+  --grey-color: #333333;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to left, #add2e4, #a3c4ef, #b7afee, #db94d7, #f678a7);
+    color: var(--white-color);
+}
+
+.arrow__left {
+    position: absolute;
+    top: 3%;
+    left: 30px;
+    font-size: 30px;
+    z-index: 10;
+
+    transition: all ease-in-out 0.5s;
+}
+.arrow__left:hover {
+    transform: translateX(-8px);
+}
+.arrow__left a {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.section__letters {
+    width: 100%;
+    height: 100vh;
+    padding: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.section__div {
+    text-align: center;
+    border-radius: 5px;
+    background-color: var(--white-color);
+    border: 2px solid var(--white-color);
+    padding: 60px 30px;
+    color: var(--grey-color);
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.3);
+
+    transition: all 0.3s ease;
+}
+.section__div:hover {
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.4);
+    transform: translateY(-8px);
+}
+
+.section__div h3 {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.section__div p {
+    font-size: 12px;
+}
+
+.section__div button {
+    text-decoration: none;
+    margin-top: 35px;
+    display: inline-block;
+    background-image: linear-gradient(to right top, #62aec5, #62aecd, #64aed5, #6baddc, #75abe2, #75abe2, #75abe2, #75abe2, #6baddc, #64aed5, #62aecd, #62aec5);
+    color: var(--white-color);
+    border: 1px solid var(--white-color);
+    padding: 10px 45px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: all 0.5s ease;
+}
+.section__div button:hover {
+    background-image: linear-gradient(to right bottom, #a0cbe5, #95c5e0, #8ac0da, #7ebad4, #72b5ce, #72b5ce, #72b5ce, #72b5ce, #7ebad4, #8ac0da, #95c5e0, #a0cbe5);
+    color: var(--white-color);
+    padding: 10px 80px;
+}
+
+.section__div img {
+    border: 1px solid #95c5e0;
+    width: 200px;
+    height: 200px;
+    margin-top: 40px;
+    border-radius: 50%;
+}
+
+/*  Overlay  */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+
+    z-index: 100;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay-content {
+    width: 60%;
+    height: 85%;
+    background-color: white;
+    color: #333;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0,0,0,0.2);
+    animation: aparecer 0.5s ease;
+}
+
+.overlay-content hr {
+    border: none;        
+    border-top: 1px solid var(--lightBlue-color);
+    margin: 15px 0;       
+}
+
+.overlay-content h2, h4 {
+    color: var(--darkBlue-color);
+}
+
+.overlay-content h4 {
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.overlay-content .text__edit {
+    padding: 15px 120px;
+    text-align: start;
+    color: #307185;
+}
+
+.text__edit-3 {
+    padding: 15px 100px;
+    text-align: start;
+    color: #307185;
+}
+
+@keyframes aparecer {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.btn__cerrar {
+    padding: 15px 60px;
+    background-color: var(--darkBlue-color);
+    color: var(--white-color);
+    border: 1px solid var(--grey-color);
+    border: none;
+    font-size: 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+
+    transition: all ease-in-out 0.3s;
+}
+.btn__cerrar:hover {
+    padding: 16px 65px;
+    font-size: 13px;
+}
+.frase__txt {
+    font-size: 18px;
+    font-weight: lighter;
+    position: fixed;
+    text-align: center;
+    font-size: 14px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white-color);
+}
