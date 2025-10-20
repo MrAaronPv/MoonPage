@@ -12,12 +12,17 @@
     <link rel="icon" href="img/logo.ico" type="image/x-icon">
 
     <!-- Scripts js -->
+    <script src="codeJs/animationIndex.js" defer></script>
     <script src="codeJs/animationStars.js" defer></script>
+    <script src="codeJs/moonMusic.js" defer></script>
 </head>
 <body>
 
     <header class="header__index">
-        <div class="header__son-index">
+        <div class="header__son-index" id="moon">
+            <a class="moon-class" id="moonLink" target="_blank"></a>
+        </div>
+        <div class="header__son-index" id="stars">
             <img src="img/stars.png" alt="stars" class="fondo active">
             <img src="img/starsHover.png" alt="stars" class="fondo">
 
@@ -29,8 +34,6 @@
 
             <img class="star-class-2 active" src="img/AaronStar.png" alt="star2">
             <img class="star-class-2" src="img/AaronStarHover.png" alt="star2 hover">
-
-            <a class="moon-class" href="https://youtu.be/sElE_BfQ67s?si=1Wv96AYXc3IAexBN" target="_blank"></a>
         </div>
         <div class="btn_index">
             <ul>
@@ -42,5 +45,12 @@
             </ul>
         </div>
     </header>
+
+    <!-- Uso librerías de GSAP (GreenSock Animation Platform)  -->
+    <!-- Link: https://cdnjs.com/libraries/gsap/2.1.3?utm_source -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </body>
 </html>

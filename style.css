@@ -21,6 +21,27 @@ body {
     background-image: linear-gradient(to bottom, #000000, #000000, #000000, #030303, #030303, #070707, #0d0d0d, #121212, #1a1a1a, #222222, #2b2b2b, #333333);
 }
 
+.moon-class {
+    position: absolute;
+    background-image: url(img/luna.png);
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    top: 39%;
+    left: 50%;
+    width: 180px;
+    height: 180px;
+    transform: translate(-50%);
+    z-index: 100;
+
+    transition: all ease-in-out 0.6s;
+}
+
+.moon-class:hover {
+    width: 210px;
+    height: 210px;
+}
+
 .header__index {
     width: 100%;
     height: 100vh;
@@ -83,25 +104,6 @@ body {
 
 .heart-class.active {
     opacity: 1;
-}
-
-.moon-class {
-    position: absolute;
-    background-image: url(img/luna.png);
-    background-position: center;
-    background-size: cover;
-    top: 39%;
-    left: 50%;
-    width: 180px;
-    height: 180px;
-    transform: translate(-50%);
-
-    transition: all ease-in-out 0.6s;
-}
-
-.moon-class:hover {
-    width: 220px;
-    height: 220px;
 }
 
 .btn_index {
