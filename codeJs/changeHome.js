@@ -12,5 +12,5 @@ home.addEventListener('mouseleave', () => {
 });
 
 home.addEventListener('click', () => {
-    window.location.href = '../SecondPage/pagesPort.html';
+    window.location.href = '../secondPage/pagesPort.html';
 });
