@@ -1,0 +1,29 @@
+:root {
+    --color-1: #AAB1BF;
+    --color-2: #929AA6;
+    --color-3: #313940;
+    --color-4: #626B73;
+    --color-5: #080B0D;
+    --white-color: #fff;
+    --grey-color: #333;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-1);
+    color: var(--color-3);
+}
+
+.plans__section-index {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+}

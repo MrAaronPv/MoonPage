@@ -7,15 +7,6 @@
   --grey-color: #333333;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-* {
-    margin: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-image: linear-gradient(to bottom, #000000, #000000, #000000, #030303, #030303, #070707, #0d0d0d, #121212, #1a1a1a, #222222, #2b2b2b, #333333);

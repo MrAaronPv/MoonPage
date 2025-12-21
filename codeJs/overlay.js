@@ -62,3 +62,26 @@ overlayContent3.addEventListener('click', (e) => {
 overlay3.addEventListener('click', (e) => {
   if (e.target === overlay3) overlay3.classList.remove('active');
 });
+
+
+const btnAbrir4 = document.getElementById('gif__red');
+const overlay4 = document.getElementById('overlay-4');
+const btnCerrar4 = document.getElementById('btn__cerrar-4');
+const overlayContent4 = document.querySelector('.overlay-content');
+
+btnAbrir4.addEventListener('click', () => {
+  overlay4.classList.add('active');
+});
+
+btnCerrar4.addEventListener('click', () => {
+  overlay4.classList.remove('active');
+});
+
+overlayContent4.addEventListener('click', (e) => {
+  e.stopPropagation();
+});
+
+overlay4.addEventListener('click', (e) => {
+  if (e.target === overlay4) overlay4.classList.remove('active');
+});
+

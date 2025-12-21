@@ -1,0 +1,296 @@
+:root {
+    --color-1: #ADD2E4;
+    --color-2: #F678A7;
+    --coolor-3: #32302E;
+    --coolor-4: #F2E3D5;
+    --white-color: #ffffff;
+    --grey-color: #333333;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif
+    
+}
+
+.header__main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.bck__header-1 {
+    width: 15%;
+    height: 100%;
+    background: url(/img/NuestrasFotos/Fondo_main.png) no-repeat center;
+    background-size: cover;
+    border-right: #fff 8px solid;
+    text-align: center;
+    position: relative;
+}
+.bck__header-1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3); 
+    pointer-events: none; 
+}
+.bck__header-1 p {
+    color: #fff;
+    z-index: 10;
+    position: relative;
+    text-align: center;
+}
+.bck__header-1 p:nth-child(1), .bck__header-1 p:nth-child(2) {
+    top: 40%;
+    font-size: 14px;
+}
+.bck__header-1 p:nth-child(3) {
+    top: 82%;
+    font-size: 11px;
+}
+.bck__header-1 p:nth-child(4) {
+    top: 42%;
+    left: 6%;
+    width: 90%;
+    font-weight: bold;
+    font-size: 12px;
+}
+.bck__header-2 {
+    width: 85%;
+    height: 100%;
+    background-color: var(--coolor-4);
+    position: relative;
+}
+
+.bck__header-2  img {
+    position: absolute;
+}
+
+.cloud-main {
+    top: 2vw;
+    left: 5vw;
+    width: 90%;
+    z-index: 100;
+}
+
+.moon-main, .sun-main {
+    width: 12vw;
+    top: 5%;
+}
+
+.sun-main {
+    left: 18%;
+}
+
+.moon-main {
+    right: 18%;
+}
+
+.sun-main, .moon-main {
+    opacity: 0;
+    transform: scale(1.1);
+    transition: opacity 0.8s ease-in-out;
+}
+
+.sun-main.active, .moon-main.active {
+    opacity: 1;
+}
+
+.text-main {
+    width: 12vw;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.circulos-main {
+    width: 100%;
+    padding: 0px 10px;
+    bottom: 4%; 
+}
+
+.pasto-main {
+    width: 100%;
+    bottom: 0;
+}
+
+.home-main {
+    width: 18vw;
+    bottom: 0vw;
+    left: 40%;
+    object-fit: contain;
+    overflow: hidden;
+    cursor: pointer;
+
+    transition: all ease-out .5s;
+}
+
+.home-main:hover {
+    cursor: pointer;
+}
+
+.mariposas-main, .mariposas-main-1, .mariposas-main-2, .mariposas-main-3 {
+    object-fit: contain;
+    overflow: hidden;
+}
+
+.mariposas-main {
+    width: 10vw;
+    bottom: 2%;
+    right: 10%;
+}
+.mariposas-main-1 {
+    width: 10vw;
+    bottom: 13%;
+    left: 13%;
+}
+.mariposas-main-2 {
+    width: 8vw;
+    bottom: 20%;
+    left: 5%;
+}
+.mariposas-main-3 {
+    width: 10vw;
+    bottom: 16%;
+    right: 22%;
+}
+.mariposas-main-4 {
+    width: 6vw;
+    bottom: 18%;
+    right: 5%;
+}
+
+.leaves-main, .leaves-main-1, .leaves-main-2, .leaves-main-3, .leaves-main-4, .leaves-main-5, .leaves-main-6 {
+    width: 3vw;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+.leaves-main {
+    bottom: 2%;
+    left: 2%;
+}
+.leaves-main-1 {
+    bottom: 2%;
+    right: 2%;
+}
+.leaves-main-2 {
+    bottom: 3%;
+    left: 40%;
+}
+.leaves-main-3 {
+    bottom: 2%;
+    right: 25%;
+}
+.leaves-main-4 {
+    bottom: 1%;
+    left: 15%;
+}
+.leaves-main-5 {
+    bottom: 2%;
+    right: 36%;
+}
+.leaves-main-6 {
+    bottom: 2%;
+    left: 30%;
+}
+
+.pic-1 {
+    width: 12vw;
+    top: 28%;
+    left: 4%;
+}
+
+.pic-2 {
+    width: 13vw;
+    top: 30%;
+    right: 25%;
+}
+
+.pic-3 {
+    width: 12vw;
+    top: 46%;
+    left: 25%;
+}
+
+.pic-4 {
+    width: 12vw;
+    top: 38%;
+    right: 5%;
+}
+
+.img-pic-1, .img-pic-2, .img-pic-3, .img-pic-4 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    z-index: 150;
+    background-color: rgba(0,0,0,0.8);
+    opacity: 0;
+    transition: opacity .4s ease;
+}
+
+
+.p-1, .p-2 {
+    position: absolute;
+    color: #f1f1f1;
+    padding: 0 15px;
+    width: 20%;
+    font-size: 17px;
+    text-align: center;
+    font-weight: lighter;
+    text-shadow: 0 0 4px #fff, 0 0 18px #dadada;
+}
+.p-1 {
+    left: 6%;
+}
+.p-2 {
+    right: 6%;
+}
+
+.img-pic-1 img, .img-pic-2 img, .img-pic-3 img, .img-pic-4 img {
+    width: 32%;
+    height: auto;   
+    transition: opacity .4s ease;
+}
+
+.img-pic-1.active , .img-pic-2.active , .img-pic-3.active , .img-pic-4.active {
+    opacity: 1; 
+    visibility: visible;
+}
+
+.pic-1, .pic-2, .pic-3, .pic-4 {
+    transition: all ease-out .5s;
+}
+
+.pic-1:hover, .pic-2:hover, .pic-3:hover, .pic-4:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.mensaje-main {
+    position: absolute;
+    top: 72%;
+    left: 55%;
+    width: 2vw;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease-out .8s;
+}
+.mensaje-main.active2 {
+    top: 68%;
+    width: 12vw;
+    visibility: visible;
+    opacity: 1;
+    transition: all ease-out .8s;
+}
